@@ -1,0 +1,10 @@
+html[data-theme='light'] {
+  --background-color: #fff;
+  --text-color: #000;
+}
+
+html[data-theme='dark'] {
+  --background-color: linear-gradient(100.76deg, #343131 -1.39%, #1D1919 102.08%);
+  --text-color: #fff;
+}
+

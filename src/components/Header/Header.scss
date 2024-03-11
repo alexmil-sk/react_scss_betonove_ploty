@@ -1,0 +1,66 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  padding-right: 70px;
+  padding-left: 60px;
+
+  .logo {
+    display: block;
+
+    img {
+      width: 110px;
+      height: 60px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px 2px orange;
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+
+    &__item {
+      margin-left: 67px;
+
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+
+      &_link {
+        position: relative;
+        color: #fff;
+        font-size: 17px;
+
+        &::after {
+          position: absolute;
+          display: block;
+          content: '';
+          width: 22px;
+          height: 2px;
+          background-color: #fff;
+          bottom: -8px;
+          opacity: 0;
+          transition: opacity 300ms ease-in-out 0s;
+        }
+        &:hover::after {
+          opacity: 1;
+        }
+        &.active {
+          font-family: "Catamaran Extra Bold", sans-serif;
+
+          &::after {
+            opacity: 1;
+          }
+        }
+
+        img {
+          width: 24px;
+        }
+
+      }
+    }
+  }
+}
